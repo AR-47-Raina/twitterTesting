@@ -3,22 +3,20 @@ describe("1",()=>{
      
     it("2",()=>{
         
-        cy.fixture('user').then((user) => {
+        cy.fixture('user1').then((user1) => {
         cy.visit("https://x.com/")
 
         cy.get('[data-testid="loginButton"] > .css-146c3p1').click()
-
-        cy.get('.r-1ets6dv > :nth-child(1) > .r-16y2uox').type(user.UserID)//userid
+      //userid
+      cy.get('.r-1ets6dv > :nth-child(1) > .r-16y2uox').type(user1.UserID)//userid
        
       cy.get('[class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3"]').eq(6).click()
-        
-      /* cy.get('[data-testid="ocfEnterTextTextInput"]').type(user.Email)//email
-
+      
+      //email  
+      cy.get('[data-testid="ocfEnterTextTextInput"]').type(user1.Email)//email
       cy.get('[data-testid="ocfEnterTextNextButton"] > .css-146c3p1').click()
-    */
-      cy.get("input[name='password']").type(user.Password)//password
-
-
+     //password
+      cy.get("input[name='password']").type(user1.Password)//password
       cy.get('[data-testid="LoginForm_Login_Button"] > .css-146c3p1').click()
 
 
